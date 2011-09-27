@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	/* When this function is called, PhoneGap has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+		var dataArray = [];
+		for(var n = 0; n < 5000;n++)
+		{
+			dataArray.push(n);
+		}
+		
+		console.log(dataArray.length);
+
+		// do your thing!
+		console.log("running test 1");
+		var startTime = new Date().getTime();
+
+		/// lots of looping in here
+		for(var x = 0; x < 40; x++)
+		{
+			for(var n = 0, len = dataArray.length; n < len; n++)
+			{
+				testIfElse(n % 500);	
+			}
+			//console.log(outStr);
+		}
+		
+		var elapsed = new Date().getTime() - startTime;
+		console.log("Test 1 took : " + elapsed);
+		
+		console.log("running test 2");
+		startTime = new Date().getTime();
+
+		/// lots of looping in here
+		for(var x = 0; x < 40; x++)
+		{
+			for(var n = 0, len = dataArray.length; n < len; n++)
+			{
+				testSwitch(n % 500);
+			}
+			//console.log(outStr);
+		}
+		
+		elapsed = new Date().getTime() - startTime;
+		console.log("Test 2 took : " + elapsed);
+	}
+	
+	var outStr = "";
+	
+	function testSwitch(n)
+	{
+		//outStr += "case " + n + ": break;\n"
+		switch(n)
+		{
+			case 0 : break;
+			case 1: break;
+			case 2: break;
+			case 3: break;
+			case 4: break;
+			case 5: break;
+			case 6: break;
+			case 7: break;
+			case 8: break;
+			case 9: break;
+			case 10: break;
+			case 11: break;
+			case 12: break;
+			case 13: break;
+			case 14: break;
+			case 15: break;
+			case 16: break;
+			case 17: break;
+			case 18: break;
+			case 19: break;
+			case 20: break;
+			case 21: break;
+			case 22: break;
+			case 23: break;
+			case 24: break;
+			case 25: break;
+			case 26: break;
+			case 27: break;
+			case 28: break;
+			case 29: break;
+			case 30: break;
+			case 31: break;
+			case 32: break;
+			case 33: break;
+			case 34: break;
+			case 35: break;
+			case 36: break;
+			case 37: break;
+			case 38: break;
+			case 39: break;
+			case 40: break;
+			case 41: break;
+			case 42: break;
+			case 43: break;
+			case 44: break;
+			case 45: break;
+			case 46: break;
+			case 47: break;
+			case 48: break;
+			case 49: break;
+			case 50: break;
+			case 51: break;
+			case 52: break;
+			case 53: break;
+			case 54: break;
+			case 55: break;
+			case 56: break;
+			case 57: break;
+			case 58: break;
+			case 59: break;
+			case 60: break;
+			case 61: break;
+			case 62: break;
+			case 63: break;
+			case 64: break;
+			case 65: break;
+			case 66: break;
+			case 67: break;
+			case 68: break;
+			case 69: break;
+			case 70: break;
+			case 71: break;
+			case 72: break;
+			case 73: break;
+			case 74: break;
+			case 75: break;
+			case 76: break;
+			case 77: break;
+			case 78: break;
+			case 79: break;
+			case 80: break;
+			case 81: break;
+			case 82: break;
+			case 83: break;
+			case 84: break;
+			case 85: break;
+			case 86: break;
+			case 87: break;
+			case 88: break;
+			case 89: break;
+			case 90: break;
+			case 91: break;
+			case 92: break;
+			case 93: break;
+			case 94: break;
+			case 95: break;
+			case 96: break;
+			case 97: break;
+			case 98: break;
+			case 99: break;
+			case 100: break;
+			case 101: break;
+			case 102: break;
+			case 103: break;
+			case 104: break;
+			case 105: break;
+			case 106: break;
+			case 107: break;
+			case 108: break;
+			case 109: break;
+			case 110: break;
+			case 111: break;
+			case 112: break;
+			case 113: break;
+			case 114: break;
+			case 115: break;
+			case 116: break;
+			case 117: break;
+			case 118: break;
+			case 119: break;
+			case 120: break;
+			case 121: break;
+			case 122: break;
+			case 123: break;
+			case 124: break;
+			case 125: break;
+			case 126: break;
+			case 127: break;
+			case 128: break;
+			case 129: break;
+			case 130: break;
+			case 131: break;
+			case 132: break;
+			case 133: break;
+			case 134: break;
+			case 135: break;
+			case 136: break;
+			case 137: break;
+			case 138: break;
+			case 139: break;
+			case 140: break;
+			case 141: break;
+			case 142: break;
+			case 143: break;
+			case 144: break;
+			case 145: break;
+			case 146: break;
+			case 147: break;
+			case 148: break;
+			case 149: break;
+			case 150: break;
+			case 151: break;
+			case 152: break;
+			case 153: break;
+			case 154: break;
+			case 155: break;
+			case 156: break;
+			case 157: break;
+			case 158: break;
+			case 159: break;
+			case 160: break;
+			case 161: break;
+			case 162: break;
+			case 163: break;
+			case 164: break;
+			case 165: break;
+			case 166: break;
+			case 167: break;
+			case 168: break;
+			case 169: break;
+			case 170: break;
+			case 171: break;
+			case 172: break;
+			case 173: break;
+			case 174: break;
+			case 175: break;
+			case 176: break;
+			case 177: break;
+			case 178: break;
+			case 179: break;
+			case 180: break;
+			case 181: break;
+			case 182: break;
+			case 183: break;
+			case 184: break;
+			case 185: break;
+			case 186: break;
+			case 187: break;
+			case 188: break;
+			case 189: break;
+			case 190: break;
+			case 191: break;
+			case 192: break;
+			case 193: break;
+			case 194: break;
+			case 195: break;
+			case 196: break;
+			case 197: break;
+			case 198: break;
+			case 199: break;
+			case 200: break;
+			case 201: break;
+			case 202: break;
+			case 203: break;
+			case 204: break;
+			case 205: break;
+			case 206: break;
+			case 207: break;
+			case 208: break;
+			case 209: break;
+			case 210: break;
+			case 211: break;
+			case 212: break;
+			case 213: break;
+			case 214: break;
+			case 215: break;
+			case 216: break;
+			case 217: break;
+			case 218: break;
+			case 219: break;
+			case 220: break;
+			case 221: break;
+			case 222: break;
+			case 223: break;
+			case 224: break;
+			case 225: break;
+			case 226: break;
+			case 227: break;
+			case 228: break;
+			case 229: break;
+			case 230: break;
+			case 231: break;
+			case 232: break;
+			case 233: break;
+			case 234: break;
+			case 235: break;
+			case 236: break;
+			case 237: break;
+			case 238: break;
+			case 239: break;
+			case 240: break;
+			case 241: break;
+			case 242: break;
+			case 243: break;
+			case 244: break;
+			case 245: break;
+			case 246: break;
+			case 247: break;
+			case 248: break;
+			case 249: break;
+			case 250: break;
+			case 251: break;
+			case 252: break;
+			case 253: break;
+			case 254: break;
+			case 255: break;
+			case 256: break;
+			case 257: break;
+			case 258: break;
+			case 259: break;
+			case 260: break;
+			case 261: break;
+			case 262: break;
+			case 263: break;
+			case 264: break;
+			case 265: break;
+			case 266: break;
+			case 267: break;
+			case 268: break;
+			case 269: break;
+			case 270: break;
+			case 271: break;
+			case 272: break;
+			case 273: break;
+			case 274: break;
+			case 275: break;
+			case 276: break;
+			case 277: break;
+			case 278: break;
+			case 279: break;
+			case 280: break;
+			case 281: break;
+			case 282: break;
+			case 283: break;
+			case 284: break;
+			case 285: break;
+			case 286: break;
+			case 287: break;
+			case 288: break;
+			case 289: break;
+			case 290: break;
+			case 291: break;
+			case 292: break;
+			case 293: break;
+			case 294: break;
+			case 295: break;
+			case 296: break;
+			case 297: break;
+			case 298: break;
+			case 299: break;
+			case 300: break;
+			case 301: break;
+			case 302: break;
+			case 303: break;
+			case 304: break;
+			case 305: break;
+			case 306: break;
+			case 307: break;
+			case 308: break;
+			case 309: break;
+			case 310: break;
+			case 311: break;
+			case 312: break;
+			case 313: break;
+			case 314: break;
+			case 315: break;
+			case 316: break;
+			case 317: break;
+			case 318: break;
+			case 319: break;
+			case 320: break;
+			case 321: break;
+			case 322: break;
+			case 323: break;
+			case 324: break;
+			case 325: break;
+			case 326: break;
+			case 327: break;
+			case 328: break;
+			case 329: break;
+			case 330: break;
+			case 331: break;
+			case 332: break;
+			case 333: break;
+			case 334: break;
+			case 335: break;
+			case 336: break;
+			case 337: break;
+			case 338: break;
+			case 339: break;
+			case 340: break;
+			case 341: break;
+			case 342: break;
+			case 343: break;
+			case 344: break;
+			case 345: break;
+			case 346: break;
+			case 347: break;
+			case 348: break;
+			case 349: break;
+			case 350: break;
+			case 351: break;
+			case 352: break;
+			case 353: break;
+			case 354: break;
+			case 355: break;
+			case 356: break;
+			case 357: break;
+			case 358: break;
+			case 359: break;
+			case 360: break;
+			case 361: break;
+			case 362: break;
+			case 363: break;
+			case 364: break;
+			case 365: break;
+			case 366: break;
+			case 367: break;
+			case 368: break;
+			case 369: break;
+			case 370: break;
+			case 371: break;
+			case 372: break;
+			case 373: break;
+			case 374: break;
+			case 375: break;
+			case 376: break;
+			case 377: break;
+			case 378: break;
+			case 379: break;
+			case 380: break;
+			case 381: break;
+			case 382: break;
+			case 383: break;
+			case 384: break;
+			case 385: break;
+			case 386: break;
+			case 387: break;
+			case 388: break;
+			case 389: break;
+			case 390: break;
+			case 391: break;
+			case 392: break;
+			case 393: break;
+			case 394: break;
+			case 395: break;
+			case 396: break;
+			case 397: break;
+			case 398: break;
+			case 399: break;
+			case 400: break;
+			case 401: break;
+			case 402: break;
+			case 403: break;
+			case 404: break;
+			case 405: break;
+			case 406: break;
+			case 407: break;
+			case 408: break;
+			case 409: break;
+			case 410: break;
+			case 411: break;
+			case 412: break;
+			case 413: break;
+			case 414: break;
+			case 415: break;
+			case 416: break;
+			case 417: break;
+			case 418: break;
+			case 419: break;
+			case 420: break;
+			case 421: break;
+			case 422: break;
+			case 423: break;
+			case 424: break;
+			case 425: break;
+			case 426: break;
+			case 427: break;
+			case 428: break;
+			case 429: break;
+			case 430: break;
+			case 431: break;
+			case 432: break;
+			case 433: break;
+			case 434: break;
+			case 435: break;
+			case 436: break;
+			case 437: break;
+			case 438: break;
+			case 439: break;
+			case 440: break;
+			case 441: break;
+			case 442: break;
+			case 443: break;
+			case 444: break;
+			case 445: break;
+			case 446: break;
+			case 447: break;
+			case 448: break;
+			case 449: break;
+			case 450: break;
+			case 451: break;
+			case 452: break;
+			case 453: break;
+			case 454: break;
+			case 455: break;
+			case 456: break;
+			case 457: break;
+			case 458: break;
+			case 459: break;
+			case 460: break;
+			case 461: break;
+			case 462: break;
+			case 463: break;
+			case 464: break;
+			case 465: break;
+			case 466: break;
+			case 467: break;
+			case 468: break;
+			case 469: break;
+			case 470: break;
+			case 471: break;
+			case 472: break;
+			case 473: break;
+			case 474: break;
+			case 475: break;
+			case 476: break;
+			case 477: break;
+			case 478: break;
+			case 479: break;
+			case 480: break;
+			case 481: break;
+			case 482: break;
+			case 483: break;
+			case 484: break;
+			case 485: break;
+			case 486: break;
+			case 487: break;
+			case 488: break;
+			case 489: break;
+			case 490: break;
+			case 491: break;
+			case 492: break;
+			case 493: break;
+			case 494: break;
+			case 495: break;
+			case 496: break;
+			case 497: break;
+			case 498: break;
+			case 499: break;
+		}
+	}
+	
+	function testIfElse(n)
+	{
+		//outStr += "else if(n == " + n  +"){ ; }\n";
+		if(n == 0){ ; }
+		else if(n == 1){ ; }
+		else if(n == 2){ ; }
+		else if(n == 3){ ; }
+		else if(n == 4){ ; }
+		else if(n == 5){ ; }
+		else if(n == 6){ ; }
+		else if(n == 7){ ; }
+		else if(n == 8){ ; }
+		else if(n == 9){ ; }
+		else if(n == 10){ ; }
+		else if(n == 11){ ; }
+		else if(n == 12){ ; }
+		else if(n == 13){ ; }
+		else if(n == 14){ ; }
+		else if(n == 15){ ; }
+		else if(n == 16){ ; }
+		else if(n == 17){ ; }
+		else if(n == 18){ ; }
+		else if(n == 19){ ; }
+		else if(n == 20){ ; }
+		else if(n == 21){ ; }
+		else if(n == 22){ ; }
+		else if(n == 23){ ; }
+		else if(n == 24){ ; }
+		else if(n == 25){ ; }
+		else if(n == 26){ ; }
+		else if(n == 27){ ; }
+		else if(n == 28){ ; }
+		else if(n == 29){ ; }
+		else if(n == 30){ ; }
+		else if(n == 31){ ; }
+		else if(n == 32){ ; }
+		else if(n == 33){ ; }
+		else if(n == 34){ ; }
+		else if(n == 35){ ; }
+		else if(n == 36){ ; }
+		else if(n == 37){ ; }
+		else if(n == 38){ ; }
+		else if(n == 39){ ; }
+		else if(n == 40){ ; }
+		else if(n == 41){ ; }
+		else if(n == 42){ ; }
+		else if(n == 43){ ; }
+		else if(n == 44){ ; }
+		else if(n == 45){ ; }
+		else if(n == 46){ ; }
+		else if(n == 47){ ; }
+		else if(n == 48){ ; }
+		else if(n == 49){ ; }
+		else if(n == 50){ ; }
+		else if(n == 51){ ; }
+		else if(n == 52){ ; }
+		else if(n == 53){ ; }
+		else if(n == 54){ ; }
+		else if(n == 55){ ; }
+		else if(n == 56){ ; }
+		else if(n == 57){ ; }
+		else if(n == 58){ ; }
+		else if(n == 59){ ; }
+		else if(n == 60){ ; }
+		else if(n == 61){ ; }
+		else if(n == 62){ ; }
+		else if(n == 63){ ; }
+		else if(n == 64){ ; }
+		else if(n == 65){ ; }
+		else if(n == 66){ ; }
+		else if(n == 67){ ; }
+		else if(n == 68){ ; }
+		else if(n == 69){ ; }
+		else if(n == 70){ ; }
+		else if(n == 71){ ; }
+		else if(n == 72){ ; }
+		else if(n == 73){ ; }
+		else if(n == 74){ ; }
+		else if(n == 75){ ; }
+		else if(n == 76){ ; }
+		else if(n == 77){ ; }
+		else if(n == 78){ ; }
+		else if(n == 79){ ; }
+		else if(n == 80){ ; }
+		else if(n == 81){ ; }
+		else if(n == 82){ ; }
+		else if(n == 83){ ; }
+		else if(n == 84){ ; }
+		else if(n == 85){ ; }
+		else if(n == 86){ ; }
+		else if(n == 87){ ; }
+		else if(n == 88){ ; }
+		else if(n == 89){ ; }
+		else if(n == 90){ ; }
+		else if(n == 91){ ; }
+		else if(n == 92){ ; }
+		else if(n == 93){ ; }
+		else if(n == 94){ ; }
+		else if(n == 95){ ; }
+		else if(n == 96){ ; }
+		else if(n == 97){ ; }
+		else if(n == 98){ ; }
+		else if(n == 99){ ; }
+		else if(n == 100){ ; }
+		else if(n == 101){ ; }
+		else if(n == 102){ ; }
+		else if(n == 103){ ; }
+		else if(n == 104){ ; }
+		else if(n == 105){ ; }
+		else if(n == 106){ ; }
+		else if(n == 107){ ; }
+		else if(n == 108){ ; }
+		else if(n == 109){ ; }
+		else if(n == 110){ ; }
+		else if(n == 111){ ; }
+		else if(n == 112){ ; }
+		else if(n == 113){ ; }
+		else if(n == 114){ ; }
+		else if(n == 115){ ; }
+		else if(n == 116){ ; }
+		else if(n == 117){ ; }
+		else if(n == 118){ ; }
+		else if(n == 119){ ; }
+		else if(n == 120){ ; }
+		else if(n == 121){ ; }
+		else if(n == 122){ ; }
+		else if(n == 123){ ; }
+		else if(n == 124){ ; }
+		else if(n == 125){ ; }
+		else if(n == 126){ ; }
+		else if(n == 127){ ; }
+		else if(n == 128){ ; }
+		else if(n == 129){ ; }
+		else if(n == 130){ ; }
+		else if(n == 131){ ; }
+		else if(n == 132){ ; }
+		else if(n == 133){ ; }
+		else if(n == 134){ ; }
+		else if(n == 135){ ; }
+		else if(n == 136){ ; }
+		else if(n == 137){ ; }
+		else if(n == 138){ ; }
+		else if(n == 139){ ; }
+		else if(n == 140){ ; }
+		else if(n == 141){ ; }
+		else if(n == 142){ ; }
+		else if(n == 143){ ; }
+		else if(n == 144){ ; }
+		else if(n == 145){ ; }
+		else if(n == 146){ ; }
+		else if(n == 147){ ; }
+		else if(n == 148){ ; }
+		else if(n == 149){ ; }
+		else if(n == 150){ ; }
+		else if(n == 151){ ; }
+		else if(n == 152){ ; }
+		else if(n == 153){ ; }
+		else if(n == 154){ ; }
+		else if(n == 155){ ; }
+		else if(n == 156){ ; }
+		else if(n == 157){ ; }
+		else if(n == 158){ ; }
+		else if(n == 159){ ; }
+		else if(n == 160){ ; }
+		else if(n == 161){ ; }
+		else if(n == 162){ ; }
+		else if(n == 163){ ; }
+		else if(n == 164){ ; }
+		else if(n == 165){ ; }
+		else if(n == 166){ ; }
+		else if(n == 167){ ; }
+		else if(n == 168){ ; }
+		else if(n == 169){ ; }
+		else if(n == 170){ ; }
+		else if(n == 171){ ; }
+		else if(n == 172){ ; }
+		else if(n == 173){ ; }
+		else if(n == 174){ ; }
+		else if(n == 175){ ; }
+		else if(n == 176){ ; }
+		else if(n == 177){ ; }
+		else if(n == 178){ ; }
+		else if(n == 179){ ; }
+		else if(n == 180){ ; }
+		else if(n == 181){ ; }
+		else if(n == 182){ ; }
+		else if(n == 183){ ; }
+		else if(n == 184){ ; }
+		else if(n == 185){ ; }
+		else if(n == 186){ ; }
+		else if(n == 187){ ; }
+		else if(n == 188){ ; }
+		else if(n == 189){ ; }
+		else if(n == 190){ ; }
+		else if(n == 191){ ; }
+		else if(n == 192){ ; }
+		else if(n == 193){ ; }
+		else if(n == 194){ ; }
+		else if(n == 195){ ; }
+		else if(n == 196){ ; }
+		else if(n == 197){ ; }
+		else if(n == 198){ ; }
+		else if(n == 199){ ; }
+		else if(n == 200){ ; }
+		else if(n == 201){ ; }
+		else if(n == 202){ ; }
+		else if(n == 203){ ; }
+		else if(n == 204){ ; }
+		else if(n == 205){ ; }
+		else if(n == 206){ ; }
+		else if(n == 207){ ; }
+		else if(n == 208){ ; }
+		else if(n == 209){ ; }
+		else if(n == 210){ ; }
+		else if(n == 211){ ; }
+		else if(n == 212){ ; }
+		else if(n == 213){ ; }
+		else if(n == 214){ ; }
+		else if(n == 215){ ; }
+		else if(n == 216){ ; }
+		else if(n == 217){ ; }
+		else if(n == 218){ ; }
+		else if(n == 219){ ; }
+		else if(n == 220){ ; }
+		else if(n == 221){ ; }
+		else if(n == 222){ ; }
+		else if(n == 223){ ; }
+		else if(n == 224){ ; }
+		else if(n == 225){ ; }
+		else if(n == 226){ ; }
+		else if(n == 227){ ; }
+		else if(n == 228){ ; }
+		else if(n == 229){ ; }
+		else if(n == 230){ ; }
+		else if(n == 231){ ; }
+		else if(n == 232){ ; }
+		else if(n == 233){ ; }
+		else if(n == 234){ ; }
+		else if(n == 235){ ; }
+		else if(n == 236){ ; }
+		else if(n == 237){ ; }
+		else if(n == 238){ ; }
+		else if(n == 239){ ; }
+		else if(n == 240){ ; }
+		else if(n == 241){ ; }
+		else if(n == 242){ ; }
+		else if(n == 243){ ; }
+		else if(n == 244){ ; }
+		else if(n == 245){ ; }
+		else if(n == 246){ ; }
+		else if(n == 247){ ; }
+		else if(n == 248){ ; }
+		else if(n == 249){ ; }
+		else if(n == 250){ ; }
+		else if(n == 251){ ; }
+		else if(n == 252){ ; }
+		else if(n == 253){ ; }
+		else if(n == 254){ ; }
+		else if(n == 255){ ; }
+		else if(n == 256){ ; }
+		else if(n == 257){ ; }
+		else if(n == 258){ ; }
+		else if(n == 259){ ; }
+		else if(n == 260){ ; }
+		else if(n == 261){ ; }
+		else if(n == 262){ ; }
+		else if(n == 263){ ; }
+		else if(n == 264){ ; }
+		else if(n == 265){ ; }
+		else if(n == 266){ ; }
+		else if(n == 267){ ; }
+		else if(n == 268){ ; }
+		else if(n == 269){ ; }
+		else if(n == 270){ ; }
+		else if(n == 271){ ; }
+		else if(n == 272){ ; }
+		else if(n == 273){ ; }
+		else if(n == 274){ ; }
+		else if(n == 275){ ; }
+		else if(n == 276){ ; }
+		else if(n == 277){ ; }
+		else if(n == 278){ ; }
+		else if(n == 279){ ; }
+		else if(n == 280){ ; }
+		else if(n == 281){ ; }
+		else if(n == 282){ ; }
+		else if(n == 283){ ; }
+		else if(n == 284){ ; }
+		else if(n == 285){ ; }
+		else if(n == 286){ ; }
+		else if(n == 287){ ; }
+		else if(n == 288){ ; }
+		else if(n == 289){ ; }
+		else if(n == 290){ ; }
+		else if(n == 291){ ; }
+		else if(n == 292){ ; }
+		else if(n == 293){ ; }
+		else if(n == 294){ ; }
+		else if(n == 295){ ; }
+		else if(n == 296){ ; }
+		else if(n == 297){ ; }
+		else if(n == 298){ ; }
+		else if(n == 299){ ; }
+		else if(n == 300){ ; }
+		else if(n == 301){ ; }
+		else if(n == 302){ ; }
+		else if(n == 303){ ; }
+		else if(n == 304){ ; }
+		else if(n == 305){ ; }
+		else if(n == 306){ ; }
+		else if(n == 307){ ; }
+		else if(n == 308){ ; }
+		else if(n == 309){ ; }
+		else if(n == 310){ ; }
+		else if(n == 311){ ; }
+		else if(n == 312){ ; }
+		else if(n == 313){ ; }
+		else if(n == 314){ ; }
+		else if(n == 315){ ; }
+		else if(n == 316){ ; }
+		else if(n == 317){ ; }
+		else if(n == 318){ ; }
+		else if(n == 319){ ; }
+		else if(n == 320){ ; }
+		else if(n == 321){ ; }
+		else if(n == 322){ ; }
+		else if(n == 323){ ; }
+		else if(n == 324){ ; }
+		else if(n == 325){ ; }
+		else if(n == 326){ ; }
+		else if(n == 327){ ; }
+		else if(n == 328){ ; }
+		else if(n == 329){ ; }
+		else if(n == 330){ ; }
+		else if(n == 331){ ; }
+		else if(n == 332){ ; }
+		else if(n == 333){ ; }
+		else if(n == 334){ ; }
+		else if(n == 335){ ; }
+		else if(n == 336){ ; }
+		else if(n == 337){ ; }
+		else if(n == 338){ ; }
+		else if(n == 339){ ; }
+		else if(n == 340){ ; }
+		else if(n == 341){ ; }
+		else if(n == 342){ ; }
+		else if(n == 343){ ; }
+		else if(n == 344){ ; }
+		else if(n == 345){ ; }
+		else if(n == 346){ ; }
+		else if(n == 347){ ; }
+		else if(n == 348){ ; }
+		else if(n == 349){ ; }
+		else if(n == 350){ ; }
+		else if(n == 351){ ; }
+		else if(n == 352){ ; }
+		else if(n == 353){ ; }
+		else if(n == 354){ ; }
+		else if(n == 355){ ; }
+		else if(n == 356){ ; }
+		else if(n == 357){ ; }
+		else if(n == 358){ ; }
+		else if(n == 359){ ; }
+		else if(n == 360){ ; }
+		else if(n == 361){ ; }
+		else if(n == 362){ ; }
+		else if(n == 363){ ; }
+		else if(n == 364){ ; }
+		else if(n == 365){ ; }
+		else if(n == 366){ ; }
+		else if(n == 367){ ; }
+		else if(n == 368){ ; }
+		else if(n == 369){ ; }
+		else if(n == 370){ ; }
+		else if(n == 371){ ; }
+		else if(n == 372){ ; }
+		else if(n == 373){ ; }
+		else if(n == 374){ ; }
+		else if(n == 375){ ; }
+		else if(n == 376){ ; }
+		else if(n == 377){ ; }
+		else if(n == 378){ ; }
+		else if(n == 379){ ; }
+		else if(n == 380){ ; }
+		else if(n == 381){ ; }
+		else if(n == 382){ ; }
+		else if(n == 383){ ; }
+		else if(n == 384){ ; }
+		else if(n == 385){ ; }
+		else if(n == 386){ ; }
+		else if(n == 387){ ; }
+		else if(n == 388){ ; }
+		else if(n == 389){ ; }
+		else if(n == 390){ ; }
+		else if(n == 391){ ; }
+		else if(n == 392){ ; }
+		else if(n == 393){ ; }
+		else if(n == 394){ ; }
+		else if(n == 395){ ; }
+		else if(n == 396){ ; }
+		else if(n == 397){ ; }
+		else if(n == 398){ ; }
+		else if(n == 399){ ; }
+		else if(n == 400){ ; }
+		else if(n == 401){ ; }
+		else if(n == 402){ ; }
+		else if(n == 403){ ; }
+		else if(n == 404){ ; }
+		else if(n == 405){ ; }
+		else if(n == 406){ ; }
+		else if(n == 407){ ; }
+		else if(n == 408){ ; }
+		else if(n == 409){ ; }
+		else if(n == 410){ ; }
+		else if(n == 411){ ; }
+		else if(n == 412){ ; }
+		else if(n == 413){ ; }
+		else if(n == 414){ ; }
+		else if(n == 415){ ; }
+		else if(n == 416){ ; }
+		else if(n == 417){ ; }
+		else if(n == 418){ ; }
+		else if(n == 419){ ; }
+		else if(n == 420){ ; }
+		else if(n == 421){ ; }
+		else if(n == 422){ ; }
+		else if(n == 423){ ; }
+		else if(n == 424){ ; }
+		else if(n == 425){ ; }
+		else if(n == 426){ ; }
+		else if(n == 427){ ; }
+		else if(n == 428){ ; }
+		else if(n == 429){ ; }
+		else if(n == 430){ ; }
+		else if(n == 431){ ; }
+		else if(n == 432){ ; }
+		else if(n == 433){ ; }
+		else if(n == 434){ ; }
+		else if(n == 435){ ; }
+		else if(n == 436){ ; }
+		else if(n == 437){ ; }
+		else if(n == 438){ ; }
+		else if(n == 439){ ; }
+		else if(n == 440){ ; }
+		else if(n == 441){ ; }
+		else if(n == 442){ ; }
+		else if(n == 443){ ; }
+		else if(n == 444){ ; }
+		else if(n == 445){ ; }
+		else if(n == 446){ ; }
+		else if(n == 447){ ; }
+		else if(n == 448){ ; }
+		else if(n == 449){ ; }
+		else if(n == 450){ ; }
+		else if(n == 451){ ; }
+		else if(n == 452){ ; }
+		else if(n == 453){ ; }
+		else if(n == 454){ ; }
+		else if(n == 455){ ; }
+		else if(n == 456){ ; }
+		else if(n == 457){ ; }
+		else if(n == 458){ ; }
+		else if(n == 459){ ; }
+		else if(n == 460){ ; }
+		else if(n == 461){ ; }
+		else if(n == 462){ ; }
+		else if(n == 463){ ; }
+		else if(n == 464){ ; }
+		else if(n == 465){ ; }
+		else if(n == 466){ ; }
+		else if(n == 467){ ; }
+		else if(n == 468){ ; }
+		else if(n == 469){ ; }
+		else if(n == 470){ ; }
+		else if(n == 471){ ; }
+		else if(n == 472){ ; }
+		else if(n == 473){ ; }
+		else if(n == 474){ ; }
+		else if(n == 475){ ; }
+		else if(n == 476){ ; }
+		else if(n == 477){ ; }
+		else if(n == 478){ ; }
+		else if(n == 479){ ; }
+		else if(n == 480){ ; }
+		else if(n == 481){ ; }
+		else if(n == 482){ ; }
+		else if(n == 483){ ; }
+		else if(n == 484){ ; }
+		else if(n == 485){ ; }
+		else if(n == 486){ ; }
+		else if(n == 487){ ; }
+		else if(n == 488){ ; }
+		else if(n == 489){ ; }
+		else if(n == 490){ ; }
+		else if(n == 491){ ; }
+		else if(n == 492){ ; }
+		else if(n == 493){ ; }
+		else if(n == 494){ ; }
+		else if(n == 495){ ; }
+		else if(n == 496){ ; }
+		else if(n == 497){ ; }
+		else if(n == 498){ ; }
+		else if(n == 499){ ; }
+	}
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+	<h1>Hey, it's PhoneGap!</h1>
+	<p>Don't know how to get started? Check out <em><a target="_blank" href="http://www.phonegap.com/start#ios-x4">PhoneGap Start</a></em>
+	<br />
+	<ol>
+		<li>Check your console log for any white-list rejection errors.</li>
+		<li>Add your allowed hosts in PhoneGap.plist/ExternalHosts (wildcards OK)</li>
+	</ol>
+  </body>
+</html>
